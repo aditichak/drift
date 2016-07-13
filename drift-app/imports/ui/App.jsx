@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
 import Task from './Task.jsx';
+import DateSelector from './DateSelector.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
   getTasks() {
     return [
-      { _id: 1, text: 'This is task 1' },
-      { _id: 2, text: 'This is task 2' },
-      { _id: 3, text: 'This is task 3' },
+      { _id: 1, text: 'Paris' },
+      { _id: 2, text: 'Barcelona' },
+      { _id: 3, text: 'Shangai' },
     ];
   }
 
@@ -18,16 +19,21 @@ export default class App extends Component {
     ));
   }
 
+  renderDate() {
+    return <DateSelector></DateSelector>;
+  }
+
   render() {
     return (
       <div className="container">
         <header>
-          <h1>Todo List</h1>
+          <h1>Drift</h1>
         </header>
 
         <ul>
           {this.renderTasks()}
         </ul>
+        {this.renderDate()}
       </div>
     );
   }
