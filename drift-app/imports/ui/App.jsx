@@ -20,7 +20,16 @@ export default class App extends Component {
   }
 
   renderDate() {
-    return <DateSelector></DateSelector>;
+    return (
+        <div>
+          <span>
+        <DateSelector></DateSelector>
+            </span>
+          <span>
+            <DateSelector></DateSelector>
+          </span>
+          </div>
+  );
   }
 
   render() {
