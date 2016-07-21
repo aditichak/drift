@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Task from './Task.jsx';
 import DateSelector from './DateSelector.jsx';
+import SearchBar from './SearchBar.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -17,6 +18,16 @@ export default class App extends Component {
     return this.getTasks().map((task) => (
       <Task key={task._id} task={task} />
     ));
+  }
+
+  renderSearchBar() {
+    return (
+      <div>
+        <span>
+            <SearchBar></SearchBar>
+        </span>
+      </div>
+    );
   }
 
   renderDate() {
@@ -40,7 +51,7 @@ export default class App extends Component {
         </header>
 
         <ul>
-          {this.renderTasks()}
+          {this.renderSearchBar()}
         </ul>
         {this.renderDate()}
       </div>
