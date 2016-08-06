@@ -5,9 +5,15 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.9.1",
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.2.0",
     "react-datepicker": "^0.28.1",
-    "react-dom": "^15.2.0"
+    "react-dom": "^0.14.0-rc1",
+    "react-search-input": "^0.10.1"
+  },
+  "devDependencies": {
+    "object-assign": "^4.1.0"
   }
 }
